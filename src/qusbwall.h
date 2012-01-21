@@ -1,10 +1,11 @@
 /*
-** File main.h for project 
+** File qusbwall.h for project qusbwall
 **
 ** Made by Philippe THIERRY
 ** Login   <phil@reseau-libre.net>
 **
-** Started on  mer. 11 mai 2011 16:45:48 CEST Philippe THIERRY
+** Started on  sam. 21 janv. 2012 17:34:23 CET Philippe THIERRY
+** Last update sam. 21 janv. 2012 17:53:14 CET Philippe THIERRY
 **
 ** Copyright (C) 2009 - Philippe THIERRY
 **
@@ -22,8 +23,8 @@
 ** along with this program; if not, write to the Free Software
 ** Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
-/*
-** \file main.h
+/**
+** \file qusbwall.h
 **
 ** Brief documentation on one line
 ** Detailed documentation
@@ -38,8 +39,23 @@
 ** REQ_CODE_QUALITY_150
 */
 
-#ifndef MAIN_H_
-# define MAIN_H_
+#ifndef QUSBWALL_H_
+# define QUSBWALL_H_
+
+#include "ui_qusbwall.h"
+
+class QUsbwallMaster : public QWidget, private Ui::QUsbwall
+{
+    Q_OBJECT
+
+public:
+    QUsbwallMaster(QWidget *parent = 0);
 
 
-#endif /* !MAIN_H_ */
+public slots:
+
+
+private:
+};
+
+#endif /* !QUSBWALL_H_ */
