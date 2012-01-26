@@ -1,7 +1,7 @@
 
 #include <QApplication>
-#include "qusbwall.h"
-#include "main.h"
+#include "qusbwall.hh"
+#include "main.hh"
 
 using namespace Ui;
 

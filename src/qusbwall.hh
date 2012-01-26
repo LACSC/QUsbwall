@@ -42,14 +42,23 @@
 #ifndef QUSBWALL_H_
 # define QUSBWALL_H_
 
+#include <QFile>
+#include <iostream>
 #include "ui_qusbwall.h"
 
 class QUsbwallMaster : public QMainWindow, private Ui::QUsbwall
 {
     Q_OBJECT
 
+public slots:
+    void LoadKeyfile(void);
+    void LoadAllKeys(void);
+
 public:
     QUsbwallMaster(QWidget *parent = 0);
+
+private:
+    QFile keyfile;
 
 };
 

@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>system-shutdown.png</file>
+  </qresource>
+</RCC>
