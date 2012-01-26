@@ -5,7 +5,7 @@
 ** Login   <phil@reseau-libre.net>
 **
 ** Started on  sam. 21 janv. 2012 17:34:23 CET Philippe THIERRY
-** Last update sam. 21 janv. 2012 17:53:14 CET Philippe THIERRY
+** Last update sam. 21 janv. 2012 18:32:39 CET Philippe THIERRY
 **
 ** Copyright (C) 2009 - Philippe THIERRY
 **
@@ -44,18 +44,13 @@
 
 #include "ui_qusbwall.h"
 
-class QUsbwallMaster : public QWidget, private Ui::QUsbwall
+class QUsbwallMaster : public QMainWindow, private Ui::QUsbwall
 {
     Q_OBJECT
 
 public:
     QUsbwallMaster(QWidget *parent = 0);
 
-
-public slots:
-
-
-private:
 };
 
 #endif /* !QUSBWALL_H_ */

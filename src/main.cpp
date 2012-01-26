@@ -3,6 +3,8 @@
 #include "qusbwall.h"
 #include "main.h"
 
+using namespace Ui;
+
 int main(int argc, char *argv[])
 {
     int ret = 1;
