@@ -21,6 +21,7 @@ QUsbwallMaster::QUsbwallMaster(QWidget *parent __attribute__((unused)))
   // connecting slots
   connect( actionLoad_key_file, SIGNAL( triggered() ), this, SLOT( LoadKeyfile() ) );
   connect( button_loadkeyfile, SIGNAL( clicked() ), this, SLOT( LoadAllKeys() ) );
+  connect( button_savekey_local, SIGNAL( clicked() ), this, SLOT( CreateLocalKey() ) );
 
   // initialize libusbwall
   ret = usbwall_init();
@@ -33,25 +34,10 @@ QUsbwallMaster::QUsbwallMaster(QWidget *parent __attribute__((unused)))
   label_release->setNum(release);
 }
 
-/*
- * \brief open the key file
- *
- *  Reacting to the File->open action. Open the keyfile and load its content.
- */
-void QUsbwallMaster::LoadKeyfile(void)
+void QUsbwallMaster::fullfillKeyList(void)
 {
-    QString filename;
     QString line;
-    std::cout << "Loading key file..." << std::endl;
     int i = 0;
-
-    list_keyfile->setRowCount(0);
-    // showing file selection dialog and get back file name
-    filename = QFileDialog::getOpenFileName(this,
-                                            tr("Open Key file"), "/etc", tr("Usbwall key lists (*.ukl)"));
-    // set keyfile to filename.
-    keyfile.setFileName(filename);
-
     // opening, reading and closing file.
     if (keyfile.open(QFile::ReadWrite)) {
         QTextStream stream( &keyfile );
@@ -75,6 +61,29 @@ void QUsbwallMaster::LoadKeyfile(void)
         }
         keyfile.close();
     }
+
+}
+
+/*
+ * \brief open the key file
+ *
+ *  Reacting to the File->open action. Open the keyfile and load its content.
+ */
+void QUsbwallMaster::LoadKeyfile(void)
+{
+    QString filename;
+    std::cout << "Loading key file..." << std::endl;
+
+    list_keyfile->setRowCount(0);
+    // showing file selection dialog and get back file name
+    filename = QFileDialog::getOpenFileName(this,
+                                            tr("Open Key file"), "/etc", tr("Usbwall key lists (*.ukl)"));
+    // set keyfile to filename.
+    keyfile.setFileName(filename);
+
+    list_keyfile->setRowCount(0);
+    fullfillKeyList();
+
     // Okay now we need to load the file content into list_keyfile (Ui managed QListView)
     std::cout << "Keyfile loaded." << std::endl;
 }
@@ -109,4 +118,29 @@ void QUsbwallMaster::LoadAllKeys(void)
       std::cout << "adding key " << serial << std::endl;
       usbwall_key_add(vendid, prodid, serial.c_str());
   }
+}
+
+// add key to keyfile. Update keylist
+void QUsbwallMaster::CreateLocalKey(void)
+{
+    // Add new key to file
+    if (keyfile.open(QIODevice::WriteOnly | QIODevice::Append)) {
+        QTextStream stream( &keyfile );
+        QString line;
+        QString field;
+        field = line_vendorid->text();
+        line += field;
+        line += " ";
+        field = line_productid->text();
+        line += field;
+        line += " ";
+        field = line_serial->text();
+        line += field;
+        line += "\n";
+        stream << line;
+        keyfile.close();
+        // cleaning list
+        list_keyfile->setRowCount(0);
+        fullfillKeyList();
+    }
 }

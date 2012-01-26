@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>967</width>
-    <height>697</height>
+    <width>900</width>
+    <height>678</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,10 +23,10 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>590</x>
       <y>10</y>
-      <width>281</width>
-      <height>551</height>
+      <width>301</width>
+      <height>591</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -40,8 +40,8 @@
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>261</width>
-       <height>511</height>
+       <width>281</width>
+       <height>551</height>
       </rect>
      </property>
      <property name="title">
@@ -50,8 +50,8 @@
      <widget class="QLineEdit" name="line_vendorid">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>30</y>
+        <x>130</x>
+        <y>40</y>
         <width>131</width>
         <height>22</height>
        </rect>
@@ -60,8 +60,8 @@
      <widget class="QLineEdit" name="line_productid">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>50</y>
+        <x>130</x>
+        <y>60</y>
         <width>131</width>
         <height>22</height>
        </rect>
@@ -70,8 +70,8 @@
      <widget class="QLineEdit" name="line_serial">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>70</y>
+        <x>130</x>
+        <y>80</y>
         <width>131</width>
         <height>22</height>
        </rect>
@@ -80,8 +80,8 @@
      <widget class="QLabel" name="label_vendorid">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>30</y>
+        <x>20</x>
+        <y>40</y>
         <width>81</width>
         <height>16</height>
        </rect>
@@ -93,8 +93,8 @@
      <widget class="QLabel" name="label_productid">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>50</y>
+        <x>20</x>
+        <y>60</y>
         <width>81</width>
         <height>16</height>
        </rect>
@@ -106,8 +106,8 @@
      <widget class="QLabel" name="label_serial">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>70</y>
+        <x>20</x>
+        <y>80</y>
         <width>101</width>
         <height>16</height>
        </rect>
@@ -121,8 +121,8 @@
        <rect>
         <x>10</x>
         <y>140</y>
-        <width>241</width>
-        <height>301</height>
+        <width>261</width>
+        <height>361</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -136,7 +136,7 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>220</width>
+         <width>240</width>
          <height>145</height>
         </rect>
        </property>
@@ -155,10 +155,10 @@
        <widget class="QWidget" name="verticalLayoutWidget">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>10</x>
           <y>0</y>
-          <width>214</width>
-          <height>148</height>
+          <width>221</width>
+          <height>151</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
@@ -211,8 +211,8 @@
      <widget class="QPushButton" name="button_savekey_local">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>450</y>
+        <x>40</x>
+        <y>510</y>
         <width>99</width>
         <height>23</height>
        </rect>
@@ -224,8 +224,8 @@
      <widget class="QPushButton" name="button_savekey_flash">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>450</y>
+        <x>140</x>
+        <y>510</y>
         <width>99</width>
         <height>23</height>
        </rect>
@@ -240,8 +240,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>50</y>
-      <width>491</width>
+      <y>10</y>
+      <width>561</width>
       <height>211</height>
      </rect>
     </property>
@@ -251,7 +251,7 @@
     <widget class="QPushButton" name="button_loadkeyfile">
      <property name="geometry">
       <rect>
-       <x>380</x>
+       <x>450</x>
        <y>180</y>
        <width>99</width>
        <height>23</height>
@@ -266,7 +266,7 @@
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>471</width>
+       <width>541</width>
        <height>161</height>
       </rect>
      </property>
@@ -306,7 +306,7 @@
      <rect>
       <x>10</x>
       <y>270</y>
-      <width>501</width>
+      <width>561</width>
       <height>331</height>
      </rect>
     </property>
@@ -385,7 +385,7 @@
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>481</width>
+       <width>541</width>
        <height>71</height>
       </rect>
      </property>
@@ -424,7 +424,7 @@
       <rect>
        <x>10</x>
        <y>80</y>
-       <width>481</width>
+       <width>541</width>
        <height>211</height>
       </rect>
      </property>
@@ -471,7 +471,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>967</width>
+     <width>900</width>
      <height>20</height>
     </rect>
    </property>

@@ -53,9 +53,11 @@ class QUsbwallMaster : public QMainWindow, private Ui::QUsbwall
 public slots:
     void LoadKeyfile(void);
     void LoadAllKeys(void);
+    void CreateLocalKey(void);
 
 public:
     QUsbwallMaster(QWidget *parent = 0);
+    void fullfillKeyList(void);
 
 private:
     QFile keyfile;
